@@ -24,7 +24,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
-import com.example.foodapp.MainActivity
+import com.example.foodapp.Activity.Dashboard.MainActivity
 import com.example.foodapp.R
 
 class SplashActivity : BaseActivity() {

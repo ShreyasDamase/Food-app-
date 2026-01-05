@@ -1,4 +1,4 @@
-package com.example.foodapp
+package com.example.foodapp.Activity.Dashboard
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

@@ -57,7 +57,7 @@ fun GetStartedButton(onClick: () -> Unit = {}, modifier: Modifier = Modifier) {
                 text = "Get Started",
                 fontSize = 16.sp,
                 color = Color.White,
-               )
+            )
         }
     }
 
