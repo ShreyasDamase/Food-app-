@@ -6,42 +6,37 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material.rememberScaffoldState
+import androidx.compose.material.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.foodapp.Activity.Splash.BaseActivity
 import com.example.foodapp.ui.theme.FoodAppTheme
 
-class MainActivity : ComponentActivity() {
+class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            FoodAppTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+            MainScreen()
         }
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+    @Composable
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    FoodAppTheme {
-        Greeting("Android")
+    fun MainScreen() {
+        val scaffoldState = rememberScaffoldState()
+        Scaffold(
+            bottomBar = { MyBottomBar() }, scaffoldState = scaffoldState
+        ) {
+            paddingValues ->
+            LazyColumn(
+                modifier = Modifier.fillMaxSize().padding(paddingValues=paddingValues)
+            ) {  }
+        }
     }
 }

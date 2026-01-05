@@ -1,5 +1,6 @@
 package com.example.foodapp.Activity.Dashboard
 
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.BottomAppBar
@@ -27,7 +28,8 @@ fun MyBottomBar() {
     var selectedItem by remember { mutableStateOf("Home") }
     BottomAppBar(
         backgroundColor = colorResource(R.color.grey),
-        elevation = 3.dp
+//        elevation = 3.dp,
+        modifier = Modifier.navigationBarsPadding()
     ) {
         bottomMenuItemList.forEach { bottomMenuItem ->
             BottomNavigationItem(
