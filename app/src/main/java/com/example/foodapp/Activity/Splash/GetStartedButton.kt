@@ -43,7 +43,7 @@ fun GetStartedButton(onClick: () -> Unit = {}, modifier: Modifier = Modifier) {
         Button(
             onClick = { onClick() },
             colors = ButtonDefaults.buttonColors(
-                contentColor = colorResource(
+                containerColor = colorResource(
                     R.color.orange
                 )
             ),
@@ -57,7 +57,7 @@ fun GetStartedButton(onClick: () -> Unit = {}, modifier: Modifier = Modifier) {
                 text = "Get Started",
                 fontSize = 16.sp,
                 color = Color.White,
-               )
+            )
         }
     }
 
