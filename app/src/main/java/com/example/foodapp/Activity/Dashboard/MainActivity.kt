@@ -36,7 +36,10 @@ class MainActivity : BaseActivity() {
             paddingValues ->
             LazyColumn(
                 modifier = Modifier.fillMaxSize().padding(paddingValues=paddingValues)
-            ) {  }
+            ) {
+                         item { TopBar() }
+
+            }
         }
     }
 }
